@@ -9,6 +9,10 @@ This project demonstrates a simple and stylish accordion component for web devel
 - Customizable styles
 - Easy to integrate into existing projects
 
+## Live Preview
+
+You can visit the site at https://main--classy-alfajores-eea095.netlify.app/
+
 ## File Structure
 
 - `index.html`: The main HTML file containing the structure of the accordion
