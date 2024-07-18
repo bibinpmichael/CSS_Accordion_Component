@@ -1,0 +1,154 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+This spacing system provides a consistent scale for margins, paddings, and gaps.
+Using a predefined scale helps maintain visual harmony throughout the design.
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+This type scale ensures consistent and harmonious typography.
+It provides a range of sizes that work well together and maintain readability.
+*/
+
+/* 
+Color Palette:
+https://yeun.github.io/open-color/
+main color: #087f5b (used for accents and primary interactive elements)
+light color: #099268 (can be used for hover states or secondary elements)
+grey color: #343a40 (main text color for good contrast and readability)
+footer color: #495057 (can be used for less prominent text or UI elements)
+
+Using a consistent color palette helps maintain visual coherence and can convey meaning through color.
+*/
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles for the body */
+body {
+    font-family: "Inter", sans-serif;
+    color: #343a40;
+    line-height: 1;
+    /* 
+    Using a sans-serif font like Inter improves readability on screens.
+    The dark grey color provides good contrast against light backgrounds.
+    */
+}
+
+/* Accordion container styles */
+.accordion {
+    width: 700px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* 
+    Fixed width centers the accordion on larger screens.
+    Flex layout allows for easy vertical stacking of items.
+    The gap provides consistent spacing between items.
+    */
+}
+
+/* Individual accordion item styles */
+.item {
+    box-shadow: 0 0 32px rgba(0,0,0,0.1);
+    padding: 24px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 24px;
+    row-gap: 32px;
+    align-items: center;
+    margin-bottom: 24px;
+    /* 
+    Box shadow adds depth and separates items visually.
+    Grid layout allows for easy alignment of number, text, and icon.
+    The gaps ensure consistent spacing between elements.
+    */
+}
+
+/* Styles for the number and text in each item */
+.number, 
+.text {
+    font-size: 24px;
+    font-weight: 500;
+    /* 
+    Larger font size makes the main text stand out.
+    Medium font weight (500) provides good emphasis without being too heavy.
+    */
+}
+
+/* Number color */
+.number {
+    color: #dee2e6;
+    /* Light grey color makes the number visible but not distracting. */
+}
+
+/* Icon styles */
+.icon {
+    width: 24px;
+    height: 24px;
+    stroke: #087f5b;
+    /* 
+    Fixed size ensures consistency across all items.
+    The stroke color matches the main accent color for visual coherence.
+    */
+}
+
+/* Hidden box styles (content that appears when item is open) */
+.hidden-box {
+    grid-column: 2;
+    display: none;
+    /* 
+    Grid column 2 aligns the content with the main text.
+    Display: none hides the content by default.
+    */
+}
+
+/* Paragraph styles in the hidden box */
+.hidden-box p {
+    line-height: 1.6;
+    margin-bottom: 24px;
+    /* 
+    Increased line height improves readability for longer text.
+    Margin bottom provides separation from the list that follows.
+    */
+}
+
+/* List styles in the hidden box */
+.hidden-box ul {
+    color: #868e96;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* 
+    Lighter text color differentiates the list from the main content.
+    Left margin indents the list for better visual hierarchy.
+    Flex layout with gap provides consistent spacing between list items.
+    */
+}
+
+/* Styles for open accordion items */
+.open {
+    border-top: 4px solid #087f5b;
+}
+
+.open .hidden-box {
+    display: block;
+}
+
+.open .number, 
+.open .text {
+    color: #087f5b;
+}
+/* 
+These styles are applied when an item has the 'open' class.
+The border-top provides a visual indicator of the open state.
+Changing text color to the accent color further emphasizes the open state.
+*/
