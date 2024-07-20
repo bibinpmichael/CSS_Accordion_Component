@@ -11,7 +11,7 @@ This project demonstrates a simple and stylish accordion component for web devel
 
 ## Live Preview
 
-You can visit the site at https://main--classy-alfajores-eea095.netlify.app/
+You can visit the site at https://css-accordion-component.netlify.app/
 
 ## File Structure
 
